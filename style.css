@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    background-image:
+        linear-gradient(135deg, #FFD700 0%, #FFD700 200px, transparent 200px),
+        linear-gradient(135deg, transparent 0%, transparent 200px, #000000 200px, #000000 220px, transparent 220px);
+    background-repeat: no-repeat;
+    background-size: 100% 200px, 100% 220px;
+    color: #000000;
+    margin: 0;
+    padding-top: 250px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+h1, h2 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #FFD700;
+}
+
+button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 3;
+    position: relative;
+}
+
+button:hover {
+    background-color: #FFD700;
+    color: #000000;
+}
+
+input[type="text"], input[type="search"], select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #FFD700;
+}
+
+footer {
+    z-index: 1;
+    position: relative;
+}
+
+.site-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 1em;
+    border-top: 1px solid #ccc;
+    z-index: 1000;
+}
+
+.chat-container {
+    background-color: #fdfdfd;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.chat-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #000000;
+}
+
+.message-container {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.message-box {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.bot-message {
+    background-color: #eeeeee;
+    color: #000000;
+}
+
+.user-message {
+    background-color: #FFD700;
+    color: #000000;
+}
+
+.input-box {
+    width: calc(100% - 120px);
+    margin-right: 10px;
+}
+
+.send-button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.send-button:hover {
+    background-color: #FFD700;
+    color: #000000;
+}
+
+.return-link {
+    color: #000000;
+}
+
+.return-link:hover {
+    color: #FFD700;
+}
+
+.course-container {
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #000000; 
+    color: #222;
+    font-size: 1.1em;
+    position: relative;
+    z-index: 1; 
+}
+
+/* === Homepage Styles === */
+
+.homepage-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    padding-bottom: 100px;
+}
+
+.home-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.home-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-links a {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 20px;
+    background-color: #000;
+    color: #FFD700;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #FFD700;
+    color: #000;
+}
+
+.go-back-button {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #FFD700;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 2;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.go-back-button:hover {
+    background-color: #FFD700;
+    color: #000;
+}
