@@ -7,7 +7,7 @@ Requirements
 
 Instructions to View the Web Application:
 1. Unzip towsonapplication.zip, open the towsonapplication folder, and copy the towson_app folder inside it
-2. Download and install XAMPP from https://www.apachefriends.org that is compatiable with your operating system
+2. Download and install XAMPP from https://www.apachefriends.org that is compatible with your operating system
 3. Once XAMPP is installed, launch the XAAMPP Control Panel, and click on "Explorer"
 4. In the file explorer window that opens, navigate to the htdocs folder, paste the "towson_app" folder inside, and then close the file explorer window
 5. Return to the XAMPP Control Panel
@@ -16,7 +16,7 @@ Instructions to View the Web Application:
 
 Instructions to View the Web Application Database:
 1. Complete the instructions above before proceeding
-2. Download and install DB Browser for SQLite from https://sqlitebrowser.org/dl/ that is compatiable with your operating system
+2. Download and install DB Browser for SQLite from https://sqlitebrowser.org/dl/ that is compatible with your operating system
 3. Once DB Browser for SQLite is installed, launch it
 4. Click "Open Database", navigate to C:\xampp\htdocs\towson_app\db and double click on courses.db
 5. Then, the database structure will be displayed
