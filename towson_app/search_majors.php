@@ -23,6 +23,5 @@ $majors = $query->fetchAll(PDO::FETCH_ASSOC);
     </li>
 <?php endforeach; ?>
 </ul>
-<a href="index.php">Return to Home Page</a>
 <button onclick="history.back()" class="go-back-button">← Go Back</button>
 <?php include 'footer.php'; ?>

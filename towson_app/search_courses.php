@@ -4,7 +4,7 @@ include 'header.php';
 
 $db = connectDB();
 $search = $_GET['search'] ?? '';
-$query = $db->prepare("SELECT course_id, course_name FROM course WHERE course_name LIKE :search OR course_id LIKE :search");
+$query = $db->prepare("SELECT course_id, course_name FROM course WHERE course_name LIKE :search OR course_id LIKE :search ORDER BY course_id ASC");
 $query->execute([':search' => "%$search%"]);
 $courses = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -23,6 +23,5 @@ $courses = $query->fetchAll(PDO::FETCH_ASSOC);
     </li>
 <?php endforeach; ?>
 </ul>
-<a href="index.php">Return to Home Page</a>
 <button onclick="history.back()" class="go-back-button">← Go Back</button>
 <?php include 'footer.php'; ?>

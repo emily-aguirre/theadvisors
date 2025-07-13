@@ -23,7 +23,7 @@ body {
     padding: 20px;
 }
 
-header, footer {
+header {
     background-color: #000000;
     color: #ffffff;
     text-align: center;
@@ -57,6 +57,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    z-index: 3;
+    position: relative;
 }
 
 button:hover {
@@ -86,7 +88,20 @@ ul li {
 }
 
 footer {
-    margin-top: 40px;
+    z-index: 1;
+    position: relative;
+}
+
+.site-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 1em;
+    border-top: 1px solid #ccc;
+    z-index: 1000;
 }
 
 .chat-container {
@@ -176,6 +191,12 @@ footer {
     flex-direction: column;
     align-items: center;
     margin-top: 120px;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    padding-bottom: 100px;
 }
 
 .home-container {
@@ -186,6 +207,7 @@ footer {
     max-width: 500px;
     width: 90%;
     text-align: center;
+    padding-bottom: 100px;
 }
 
 .home-container h1 {
@@ -221,6 +243,7 @@ footer {
 
 .go-back-button {
     margin-top: 20px;
+    margin-left: 20px;
     padding: 10px 20px;
     background-color: #000;
     color: #FFD700;
@@ -229,6 +252,9 @@ footer {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    z-index: 2;
+    position: relative;
+    margin-bottom: 80px;
 }
 
 .go-back-button:hover {

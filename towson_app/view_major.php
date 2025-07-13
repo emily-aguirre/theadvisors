@@ -4,7 +4,7 @@ include 'header.php';
 
 $db = connectDB();
 $major_id = $_GET['major_id'] ?? '';
-$query = $db->prepare("SELECT * FROM course WHERE major_id = :major_id");
+$query = $db->prepare("SELECT * FROM course WHERE major_id = :major_id ORDER BY course_id ASC");
 $query->execute([':major_id' => $major_id]);
 $courses = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -20,4 +20,5 @@ $courses = $query->fetchAll(PDO::FETCH_ASSOC);
 <?php endforeach; ?>
 </ul>
 <a href="index.php">Return to Home Page</a>
+<button onclick="history.back()" class="go-back-button">← Go Back</button>
 <?php include 'footer.php'; ?>

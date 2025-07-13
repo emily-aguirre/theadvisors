@@ -4,7 +4,10 @@ include 'header.php';
 
 $db = connectDB();
 $course_id = $_GET['course_id'] ?? '';
-$query = $db->prepare("SELECT * FROM course WHERE course_id = :course_id");
+$query = $db->prepare("SELECT course.*, core.core_name AS core_name
+    FROM course
+    LEFT JOIN core ON course.core_id = core.core_id
+    WHERE course.course_id = :course_id");
 $query->execute([':course_id' => $course_id]);
 $course = $query->fetch(PDO::FETCH_ASSOC);
 ?>
@@ -24,6 +27,13 @@ $course = $query->fetch(PDO::FETCH_ASSOC);
             </p>
         <?php else: ?>
             <p><strong>Prerequisite:</strong> None</p>
+        <?php endif; ?>
+        <?php if ($course['core_id']): ?>
+            <p><strong>Core:</strong>
+                <?= $course['core_name'] . ' - Core ' . $course['core_id'] ?>
+            </p>
+        <?php else: ?>
+            <p><strong>Core:</strong> None</p>
         <?php endif; ?>
     <?php else: ?>
         <p>Course not found.</p>
